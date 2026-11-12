@@ -12,9 +12,12 @@ then
 elif test $vanus -ge 18 -a $vanus -lt 63
 then
          echo "Oled täiskasvanu"
-elif test $vanus -ge 63
+elif test $vanus -ge 63 -a $vanus -lt 111
 then
          echo "Oled vanur"
+elif test $vanus -ge 111
+then
+         echo "Oled ammu hauas.."
 else
          echo "Vigane sisend, tegu pole arvuga."
 fi
