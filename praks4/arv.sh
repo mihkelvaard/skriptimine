@@ -1,12 +1,15 @@
 #!/bin/bash
 
-echo -n "Sisesta täisarv: "
-read arv
-
-jaak=$(( $arv % 2 ))
-if [ $jaak -eq 0 ]
-then
-  echo "$arv on paarisarv"
+if [ $# -ne 1 ]; then
+  echo "Käivita skript koos arvuga mille paarisust või paaritust soovid kontrollida. Näiteks $0 3"
 else
-  echo "$arv on paaritu arv" 
+arv=$1
+
+ jaak=$(( $arv % 2 ))
+ if [ $jaak -eq 0 ]
+ then
+   echo "$arv on paarisarv"
+ else
+   echo "$arv on paaritu arv" 
+ fi
 fi
